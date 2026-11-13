@@ -1,6 +1,8 @@
 # Mercado do Ponto | Voucher Analytics 2026
 
-![Excel](https://img.shields.io/badge/Excel-365-217346?logo=microsoftexcel&logoColor=white) ![Área](https://img.shields.io/badge/%C3%81rea-Business%20Intelligence-17365D) ![Dados](https://img.shields.io/badge/Dados-Reais%20%7C%20Uso%20restrito-orange)
+<p align="center">
+  <img src="images/IMG_1377.PNG" alt="Mercado do Ponto" width="500">
+</p>
 
 ## Visão geral
 
@@ -108,29 +110,6 @@ As fórmulas acima são representações conceituais com nomes descritivos; as r
 4. Analise `Operadoras` e `Mix_Alelo` para investigar descontos.
 5. Confira os registros nas abas detalhadas e a origem em `Auditoria_Fontes`.
 
-**Atualização:** esta versão possui intervalos de fórmulas definidos para as linhas importadas. Para adicionar novos períodos, é necessário ampliar as bases e ajustar os intervalos e resumos; **não existe atualização automática por simples substituição de arquivos**.
-
-## Limitações
-
-- Não há conciliação comprovada entre vendas e créditos bancários.
-- A granularidade das bases difere: transações Alelo versus guias VR.
-- Os agrupamentos mensais usam datas diferentes e não permitem concluir sazonalidade de vendas combinadas.
-- Diferenças entre valores brutos e líquidos não são necessariamente apenas taxas contratuais.
-- A amostra é restrita aos dez arquivos fornecidos; não representa obrigatoriamente todos os vouchers do estabelecimento.
-- O projeto não calcula margem de contribuição ou lucratividade de produtos.
-
-## Próximas evoluções
-
-- Incluir extratos bancários para conciliação de pagamentos.
-- Distinguir taxas contratuais, antecipações, estornos e ajustes.
-- Criar indicadores de prazo médio de recebimento e valores pendentes.
-- Adicionar novos meses com fluxo de atualização automatizado.
-- Construir projeções de recebíveis e alertas de divergência.
-
-## Segurança e publicação
-
-**Atenção: este case foi construído com documentos financeiros reais de um estabelecimento.** Antes de publicar no GitHub, remova ou anonimze dados comerciais sensíveis, números de guias, identificadores de autorização, eventuais informações pessoais e arquivos originais. A planilha disponibilizada para análise operacional **não deve ser publicada diretamente sem revisão e sanitização**. Para um repositório público, prefira uma versão demonstrativa com dados sintéticos e indicadores claramente rotulados como exemplos.
-
 ## Tecnologias e competências
 
 **Excel 365**, fórmulas de agregação, modelagem analítica, análise financeira, qualidade de dados, rastreabilidade, construção de KPIs, visualização e tradução de dados em decisões de negócio.
@@ -138,6 +117,65 @@ As fórmulas acima são representações conceituais com nomes descritivos; as r
 ## Contexto do projeto
 
 Projeto de portfólio desenvolvido a partir de uma necessidade prática de gestão financeira de um mercado de bairro. As interpretações e decisões propostas são hipóteses gerenciais a validar com os contratos e extratos bancários.
-#   M e r c a d o D o P o n t o _ V o u c h e r _ A n a l y t i c s _ E x c e l  
- #   M e r c a d o D o P o n t o _ V o u c h e r _ A n a l y t i c s _ E x c e l  
- 
+
+# Perguntas e respostas de negócio — Mercado do Ponto Voucher Analytics
+
+**Escopo:** cinco arquivos Alelo e cinco arquivos VR, identificados de junho a outubro de 2026. Alelo = transações; VR = guias de reembolso. Os critérios de data não são equivalentes.
+
+## 1. Quanto foi movimentado?
+**Resposta:** R$ 8.599,93 brutos e R$ 7.934,07 líquidos nos documentos importados.
+
+**Ação:** usar como referência documental, não como faturamento por competência.
+
+## 2. Quanto foi descontado?
+**Resposta:** R$ 665,86 (7,74% do bruto).
+
+**Ação:** verificar os itens que compõem a diferença entre bruto e líquido, inclusive ajustes.
+
+## 3. Qual operadora teve maior taxa efetiva?
+**Resposta:** Alelo 7,81%; VR 7,72%. Diferença de 0,09 ponto percentual.
+
+**Ação:** confrontar com contratos; a natureza dos documentos é diferente.
+
+## 4. Qual fonte concentra maior valor bruto?
+**Resposta:** VR, com R$ 6.234,36 (aproximadamente 72,5% do total documental); Alelo, R$ 2.365,57.
+
+**Ação:** priorizar a revisão dos valores VR por materialidade, sem interpretar como participação de vendas.
+
+## 5. Qual o mês de maior movimentação combinada?
+**Resposta:** Setembro, aproximadamente R$ 2.029,17, sob agrupamentos distintos (venda Alelo e pagamento VR).
+
+**Ação:** não concluir que foi o maior mês de vendas sem alinhar as datas de competência.
+
+## 6. Qual o ticket médio Alelo?
+**Resposta:** R$ 26,28 por transação (R$ 2.365,57 / 90).
+
+**Ação:** comparar esse indicador com períodos futuros e outras formas de pagamento.
+
+## 7. Qual o valor médio das guias VR?
+**Resposta:** R$ 51,95 por guia (R$ 6.234,36 / 120).
+
+**Ação:** utilizar como métrica administrativa, não como ticket médio de cliente.
+
+## 8. Quais tipos de cartão Alelo têm maior custo proporcional?
+**Resposta:** A aba `Mix_Alelo` detalha as taxas por modalidade; a conclusão deve ser extraída da ordenação das taxas efetivas e da representatividade de cada categoria.
+
+**Ação:** investigar modalidades com alto custo e volume relevante.
+
+## Conclusão
+
+O projeto **Mercado do Ponto - Voucher Analytics 2026** demonstra como dados financeiros operacionais podem ser transformados em informações estratégicas para apoiar a gestão de um negócio varejista.
+
+Por meio do Excel 365, foi possível consolidar e analisar documentos das operadoras Alelo e VR, estruturar indicadores financeiros e desenvolver um dashboard gerencial para acompanhar valores brutos, recebimentos líquidos, descontos e taxas efetivas.
+
+A análise identificou uma movimentação bruta de **R$ 8.599,93**, com **R$ 665,86 em descontos**, representando uma taxa efetiva consolidada de **7,74%**. Esses resultados evidenciam a importância de monitorar os custos associados aos meios de pagamento e identificar oportunidades de melhoria na gestão financeira.
+
+Além dos indicadores, o projeto reforçou a importância da **qualidade dos dados, padronização das informações e interpretação correta das diferentes fontes**, especialmente ao trabalhar com registros de vendas e guias de reembolso.
+
+Mais do que construir uma planilha ou dashboard, o objetivo foi aplicar conceitos de **Data Analytics, Business Intelligence e análise de negócios** para responder a perguntas reais e transformar dados em informações úteis para a tomada de decisão.
+
+Como evolução, o projeto poderá incorporar conciliação bancária automatizada, análises de rentabilidade, acompanhamento de prazos de recebimento e integração com ferramentas como Python, SQL e Power BI.
+
+**O principal aprendizado é que o valor da análise de dados não está apenas nos indicadores apresentados, mas na capacidade de compreender o negócio, identificar problemas e apoiar decisões fundamentadas em dados confiáveis.**
+
+
