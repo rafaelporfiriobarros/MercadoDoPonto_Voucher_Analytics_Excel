@@ -139,4 +139,5 @@ As fórmulas acima são representações conceituais com nomes descritivos; as r
 
 Projeto de portfólio desenvolvido a partir de uma necessidade prática de gestão financeira de um mercado de bairro. As interpretações e decisões propostas são hipóteses gerenciais a validar com os contratos e extratos bancários.
 #   M e r c a d o D o P o n t o _ V o u c h e r _ A n a l y t i c s _ E x c e l  
+ #   M e r c a d o D o P o n t o _ V o u c h e r _ A n a l y t i c s _ E x c e l  
  
