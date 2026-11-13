@@ -118,7 +118,7 @@ As fórmulas acima são representações conceituais com nomes descritivos; as r
 
 Projeto de portfólio desenvolvido a partir de uma necessidade prática de gestão financeira de um mercado de bairro. As interpretações e decisões propostas são hipóteses gerenciais a validar com os contratos e extratos bancários.
 
-# Perguntas e respostas de negócio — Mercado do Ponto Voucher Analytics
+# Perguntas e respostas de negócio - Mercado do Ponto Voucher Analytics
 
 **Escopo:** cinco arquivos Alelo e cinco arquivos VR, identificados de junho a outubro de 2026. Alelo = transações; VR = guias de reembolso. Os critérios de data não são equivalentes.
 
